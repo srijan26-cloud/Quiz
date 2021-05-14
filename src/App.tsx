@@ -79,12 +79,13 @@ const App = () => {
             <GlobalStyle />
             <Wrapper>
             <h1>Computer Quiz</h1>
+            
             {gameOver || userAnswers.length === TOTAL_QUESTIONS ?(
             <button className='start' onClick={startAPI}>
                     Start
             </button>
             ) : null}
-            {!gameOver ? (< p className='score'> Score : {score}</p>) : null}
+            {!gameOver ? (< p className='score'>Your Score : {score}</p>) : null}
             {loading && (<p > Loading Question : </p>)}     
             {!loading && !gameOver &&
                 <QuestionCard
@@ -103,6 +104,7 @@ const App = () => {
                 :
                 null
                 }
+            <h3>Made by Srijan Chandra</h3>
             </Wrapper>
              </>
     );
